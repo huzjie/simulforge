@@ -1,0 +1,14 @@
+# Direct speech-to-speech profile: bypass the ASR/MT/TTS cascade
+cascade:
+  use_cascade: false
+s2s:
+  direct: true
+  embed_dim: 32
+declared:
+  project: Hy-SimulMT
+  vendor: Tencent Hunyuan
+  announcement: 2026-10-26
+  model: 30B-A3B
+  latency_seconds: 3.0
+  language_pair: Chinese <-> English
+  license: Apache-2.0

@@ -1,0 +1,6 @@
+You are a streaming text-to-speech engine with voice cloning. Synthesize the
+translated text in the target language while preserving the source speaker's
+timbre, tone, and pace. Return natural, expressive speech.
+
+Text: {translation}
+Speaker embedding: {speaker_embedding}

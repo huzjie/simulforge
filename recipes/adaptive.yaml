@@ -1,0 +1,7 @@
+# confidence-adaptive recipe: latency-first
+policy:
+  default_policy: adaptive
+  waitk: 2
+  confidence_threshold: 0.4
+latency:
+  word_seconds: 0.5

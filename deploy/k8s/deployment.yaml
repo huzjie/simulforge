@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simulforge
+  labels:
+    app: simulforge
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: simulforge
+  template:
+    metadata:
+      labels:
+        app: simulforge
+    spec:
+      containers:
+        - name: simulforge
+          image: simulforge:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8432
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8432
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          resources:
+            requests:
+              cpu: 250m
+              memory: 256Mi
+            limits:
+              cpu: 1
+              memory: 512Mi

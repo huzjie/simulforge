@@ -1,0 +1,7 @@
+# wait-k recipe: fixed lag baseline
+policy:
+  default_policy: waitk
+  waitk: 4
+  confidence_threshold: 0.6
+latency:
+  word_seconds: 0.5

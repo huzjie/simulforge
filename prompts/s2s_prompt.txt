@@ -1,0 +1,7 @@
+You are a direct speech-to-speech translation model. Map the input speech in the
+source language directly to speech in the target language, preserving the
+speaker's voice. Do not emit an intermediate transcript.
+
+Input speech: {audio}
+Speaker embedding: {speaker_embedding}
+Target language: {target_language}

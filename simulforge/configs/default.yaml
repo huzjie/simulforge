@@ -1,0 +1,72 @@
+# simulforge default configuration
+# Declared scale (Hy-SimulMT 30B-A3B / ~3s StreamLAAL) is informational only;
+# the reference instantiates tiny tensors.
+
+app:
+  name: simulforge
+  version: 1.0.0
+
+audio:
+  sample_rate: 16000
+  frame_ms: 25
+  hop_ms: 10
+  chunk_ms: 100
+  n_mels: 40
+  n_fft: 512
+
+vad:
+  energy_threshold: 0.02
+  min_speech_ms: 300
+  min_silence_ms: 200
+
+policy:
+  default_policy: adaptive
+  waitk: 4
+  confidence_threshold: 0.6
+  gamma: 1.0
+
+cascade:
+  use_cascade: true
+  language_pair: zh-en
+
+s2s:
+  direct: false
+  embed_dim: 32
+
+latency:
+  word_seconds: 0.5
+  commit_policy: greedy
+
+eval:
+  n_sentences: 64
+  seed: 20261027
+
+model:
+  dim: 32
+  vocab: 2048
+  embed_dim: 32
+  declared_params_b: 30.0
+  declared_active_b: 3.0
+
+serving:
+  host: 127.0.0.1
+  port: 8432
+
+train:
+  learning_rate: 0.3
+  max_steps: 24
+  seed: 20261027
+
+bench:
+  n_sentences: 64
+  seed: 20261027
+  skills: [0.5, 0.625, 0.75, 0.875, 1.0]
+
+declared:
+  project: Hy-SimulMT
+  vendor: Tencent Hunyuan
+  announcement: 2026-10-26
+  model: 30B-A3B
+  latency_seconds: 3.0
+  language_pair: Chinese <-> English
+  license: Apache-2.0

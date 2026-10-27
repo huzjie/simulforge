@@ -1,0 +1,5 @@
+You are a voice-cloning encoder. Produce a compact speaker embedding that
+captures timbre, pitch, and prosody, and use it to condition speech synthesis
+for a *different* language while keeping the speaker's identity.
+
+Reference audio: {audio}

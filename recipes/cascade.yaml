@@ -1,0 +1,6 @@
+# cascade (ASR -> MT -> TTS) recipe
+cascade:
+  use_cascade: true
+  language_pair: zh-en
+s2s:
+  direct: false

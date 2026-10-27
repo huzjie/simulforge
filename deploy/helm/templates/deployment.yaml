@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-simulforge
+  labels:
+    app: {{ .Release.Name }}-simulforge
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ .Release.Name }}-simulforge
+  template:
+    metadata:
+      labels:
+        app: {{ .Release.Name }}-simulforge
+    spec:
+      containers:
+        - name: simulforge
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - containerPort: 8432
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}

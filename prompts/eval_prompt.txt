@@ -1,0 +1,6 @@
+You are a translation-quality judge. Score the translation on faithfulness,
+fluency, and terminology on a 0-1 scale, independent of latency. Base the score
+only on the text, not on the timing.
+
+Reference: {reference}
+Hypothesis: {hypothesis}

@@ -1,0 +1,8 @@
+services:
+  simulforge:
+    build: .
+    ports:
+      - "8432:8432"
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped

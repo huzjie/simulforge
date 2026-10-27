@@ -1,0 +1,8 @@
+You are a simultaneous-interpretation read/write policy. At each step, decide
+whether to READ one more source word or WRITE one more target word, given the
+current context and your confidence. Optimize the quality-latency tradeoff:
+write early when confident, read more when uncertain.
+
+source_read={source_read} source_len={source_len}
+target_written={target_written} target_len={target_len}
+confidence={confidence}

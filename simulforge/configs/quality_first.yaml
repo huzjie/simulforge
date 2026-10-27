@@ -1,0 +1,13 @@
+# Quality-first profile: conservative wait-k for maximum translation fidelity
+policy:
+  default_policy: waitk
+  waitk: 8
+  confidence_threshold: 0.8
+declared:
+  project: Hy-SimulMT
+  vendor: Tencent Hunyuan
+  announcement: 2026-10-26
+  model: 30B-A3B
+  latency_seconds: 3.0
+  language_pair: Chinese <-> English
+  license: Apache-2.0

@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: simulforge
+spec:
+  selector:
+    app: simulforge
+  ports:
+    - port: 8432
+      targetPort: 8432
+  type: ClusterIP

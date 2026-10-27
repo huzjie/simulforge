@@ -1,0 +1,6 @@
+# direct speech-to-speech recipe
+cascade:
+  use_cascade: false
+s2s:
+  direct: true
+  embed_dim: 32

@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Release.Name }}-simulforge
+spec:
+  selector:
+    app: {{ .Release.Name }}-simulforge
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: 8432
+  type: {{ .Values.service.type }}

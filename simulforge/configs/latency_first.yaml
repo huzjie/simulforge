@@ -1,0 +1,13 @@
+# Latency-first profile: aggressive adaptive policy with a low wait-k
+policy:
+  default_policy: adaptive
+  waitk: 2
+  confidence_threshold: 0.4
+declared:
+  project: Hy-SimulMT
+  vendor: Tencent Hunyuan
+  announcement: 2026-10-26
+  model: 30B-A3B
+  latency_seconds: 3.0
+  language_pair: Chinese <-> English
+  license: Apache-2.0

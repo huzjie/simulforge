@@ -1,0 +1,5 @@
+# voice-cloning recipe
+s2s:
+  embed_dim: 64
+latency:
+  word_seconds: 0.5
